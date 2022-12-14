@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: inherit;
+  overscroll-behavior: contain;
+  /* Padding for stacked Sticky NavFooter and FormFooter components */
+  padding-bottom: 165px;
+}
+
+.atd-spinner {
+  animation: spinner 1s infinite;
+  margin: auto;
+  display: block;
+}
+
+.atd-spinner--padded {
+  animation: spinner 1s infinite;
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,16 @@
+# Production branch uses Production DB
+[context.production]
+    environment = { REACT_APP_KNACK_APP_ID = "5815f29f7f7252cc2ca91c4f"}
+
+# Staging and feature branches uses Test DB
+[context.master]
+    environment = { REACT_APP_KNACK_APP_ID = "5e2216f0cbf8d9001616b034"}
+[context.branch-deploy]
+    environment = { REACT_APP_KNACK_APP_ID = "5e2216f0cbf8d9001616b034"}
+
+[[headers]]
+    for = "/*"
+    [headers.values]
+     # COMMENT: Multi-key header rules are expressed with multi-line strings
+    cache-control = '''
+    max-age=86400'''
